@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/RateMovies/static/css/main.ab7136cd.chunk.css",
+    "main.js": "/RateMovies/static/js/main.1816cb51.chunk.js",
+    "main.js.map": "/RateMovies/static/js/main.1816cb51.chunk.js.map",
+    "runtime-main.js": "/RateMovies/static/js/runtime-main.0b96379f.js",
+    "runtime-main.js.map": "/RateMovies/static/js/runtime-main.0b96379f.js.map",
+    "static/js/2.64a308a4.chunk.js": "/RateMovies/static/js/2.64a308a4.chunk.js",
+    "static/js/2.64a308a4.chunk.js.map": "/RateMovies/static/js/2.64a308a4.chunk.js.map",
+    "static/js/3.541e0f72.chunk.js": "/RateMovies/static/js/3.541e0f72.chunk.js",
+    "static/js/3.541e0f72.chunk.js.map": "/RateMovies/static/js/3.541e0f72.chunk.js.map",
+    "index.html": "/RateMovies/index.html",
+    "static/css/main.ab7136cd.chunk.css.map": "/RateMovies/static/css/main.ab7136cd.chunk.css.map",
+    "static/js/2.64a308a4.chunk.js.LICENSE.txt": "/RateMovies/static/js/2.64a308a4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0b96379f.js",
+    "static/js/2.64a308a4.chunk.js",
+    "static/css/main.ab7136cd.chunk.css",
+    "static/js/main.1816cb51.chunk.js"
+  ]
+}
