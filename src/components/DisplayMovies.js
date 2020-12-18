@@ -8,11 +8,13 @@ const DisplayMovies = () => {
 	const searchMovie = (search) => {
 		let result = [];
 		for (let i = 0; i < movies.length; i++) {
-			console.log(search, movies[i].movie.substring(0, search.length));
+			
 			if (movies[i].movie.substring(0, search.length) === search) {
+				console.log(search, movies[i].movie.substring(0, search.length));
 				result.push(movies[i]);
 			}
 		}
+		console.log(result);
 		return result;
 	};
 	return (
@@ -26,7 +28,7 @@ const DisplayMovies = () => {
 						id="search"
 						name="search"
 						value={search}
-						onChange={(e) => setSearch(e.target.value)}
+						onChange={(e) => { setSearch(e.target.value) }}
 					/>
 				</div>
 			</form>
@@ -39,23 +41,13 @@ const DisplayMovies = () => {
 					</tr>
 				</thead>
 				<tbody>
-					{search === '' ? (
-						movies.map((m) => (
-							<tr key={Math.floor(Math.random() * 100)}>
+					{searchMovie(search).length > 0 ? searchMovie(search).map((m) => (
+							<tr key={Math.floor(Math.random() * 10000000)}>
 								<td>{m.movie}</td>
 								<td>{m.rating}</td>
 								<td>{m.duration}</td>
 							</tr>
-						))
-					) : (
-						searchMovie(search).map((m) => (
-							<tr key={Math.floor(Math.random() * 100)}>
-								<td>{m.movie}</td>
-								<td>{m.rating}</td>
-								<td>{m.duration}</td>
-							</tr>
-						))
-					)}
+						)) : ''}
 				</tbody>
 			</table>
 		</div>
