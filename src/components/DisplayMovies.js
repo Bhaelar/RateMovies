@@ -4,14 +4,16 @@ import { GlobalContext } from '../context/GlobalState';
 const DisplayMovies = () => {
 	const { movies } = useContext(GlobalContext);
 	const [ search, setSearch ] = useState('');
+
 	const searchMovie = (search) => {
 		let result = [];
 		for (let i = 0; i < movies.length; i++) {
-			if (movies[i].movie.substring(0, search.length + 1) === search) {
+			console.log(search, movies[i].movie.substring(0, search.length));
+			if (movies[i].movie.substring(0, search.length) === search) {
 				result.push(movies[i]);
 			}
-			return result;
 		}
+		return result;
 	};
 	return (
 		<div className="mt-3">
@@ -37,7 +39,7 @@ const DisplayMovies = () => {
 					</tr>
 				</thead>
 				<tbody>
-					{movies.length > 0 ? search === '' ? (
+					{search === '' ? (
 						movies.map((m) => (
 							<tr key={Math.floor(Math.random() * 100)}>
 								<td>{m.movie}</td>
@@ -53,8 +55,6 @@ const DisplayMovies = () => {
 								<td>{m.duration}</td>
 							</tr>
 						))
-					) : (
-						<p>Nothing to display</p>
 					)}
 				</tbody>
 			</table>
